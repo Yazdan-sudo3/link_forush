@@ -28,7 +28,6 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
-      text-align: left;
       background-color: #fff;
       padding: 20px;
       border-radius: 12px;
@@ -76,6 +75,17 @@
       margin-top: 20px;
     }
 
+    .lang-button {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 8px 15px;
+      background-color: #eee;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
     .lang-section {
       display: none;
     }
@@ -89,15 +99,17 @@
   direction: rtl;
 }
 
+    /* Center headings/buttons in Persian section */
 .fa h1,
 .fa p,
 .fa a,
 .fa button {
-  text-align: center; /* keep headings, version, and button centered */
+      text-align: center;
 }
 
+    /* Instructions block right-aligned in Persian */
 .fa .instructions {
-  text-align: right; /* instructions stay right-aligned */
+      text-align: right;
 }
 
   </style>
@@ -113,8 +125,8 @@
 <body>
 
   <div class="lang-toggle">
-    <button onclick="switchLang('fa')">فارسی</button>
-    <button onclick="switchLang('en')">English</button>
+    <button class="lang-button" onclick="switchLang('fa')">🇮🇷 Fa</button>
+    <button class="lang-button" onclick="switchLang('en')">🇱🇷 En</button>
   </div>
 
   <!-- Persian Section -->
