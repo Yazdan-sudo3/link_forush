@@ -84,11 +84,22 @@
       display: block;
     }
 
-    /* Persian RTL */
-    .fa {
-      direction: rtl;
-      text-align: right;
-    }
+/* Persian RTL */
+.fa {
+  direction: rtl;
+}
+
+.fa h1,
+.fa p,
+.fa a,
+.fa button {
+  text-align: center; /* keep headings, version, and button centered */
+}
+
+.fa .instructions {
+  text-align: right; /* instructions stay right-aligned */
+}
+
   </style>
 
   <script>
