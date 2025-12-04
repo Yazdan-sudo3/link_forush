@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>Download Link_Forush</title>
+  <title>دانلود لینک‌فروش | Download LinkForush</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <style>
@@ -33,45 +33,6 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    /* Verify Block Styles */
-    .verify-box {
-      margin-top: 30px;
-      padding: 25px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .hash-block {
-      padding: 10px;
-      background-color: #eee;
-      border-radius: 8px;
-      margin: 15px 0;
-      word-break: break-all;
-      font-size: 14px;
-    }
-
-    .verify-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 25px;
-      background-color: #007BFF;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .verify-button:hover {
-      background-color: #0056b3;
     }
 
     /* Store Card Styles */
@@ -109,11 +70,77 @@
     .store-button:hover {
       background-color: #1e7e34;
     }
+
+    /* Language toggle */
+    .lang-toggle {
+      margin-top: 20px;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+
+    /* Persian RTL */
+    .fa {
+      direction: rtl;
+      text-align: right;
+    }
   </style>
 
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+    window.onload = () => switchLang('fa'); // default Persian
+  </script>
 </head>
 <body>
 
+  <div class="lang-toggle">
+    <button onclick="switchLang('fa')">فارسی</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- Persian Section -->
+  <div id="fa" class="lang-section fa active">
+    <h1>دانلود لینک‌فروش</h1>
+    <p>نسخه ۱۴.۰.۰</p>
+
+    <a href="https://github.com/Yazdan-sudo3/link_forush/releases/download/v14/link_forush.apk">
+      <button class="button">دانلود APK</button>
+    </a>
+
+    <div class="instructions">
+      <h2>نحوه نصب</h2>
+      <ol>
+        <li>روی دکمه بالا بزنید تا فایل APK دانلود شود.</li>
+        <li>در صورت نیاز اجازه نصب از منابع ناشناس را بدهید.</li>
+        <li>فایل دانلود شده را باز کرده و نصب کنید.</li>
+      </ol>
+      <p><strong>یادآوری:</strong> چک‌سام رسمی SHA-256:</p>
+      <code>5096ad79951e31d05b127a91048d276dcfcf9ab5f5acbf011520f3c079238205</code>
+    </div>
+
+    <!-- Bazzar Card -->
+    <div class="store-card">
+      <h2>دانلود از کافه بازار</h2>
+      <img src="docs/bazzar.png" alt="Bazzar Icon" class="store-icon">
+      <p>می‌توانید لینک‌فروش را مستقیماً از کافه بازار نصب کنید.</p>
+      <a class="store-button"
+         href="https://cafebazaar.ir/app/com.yourapp.linkforush"
+         target="_blank">
+         باز کردن در بازار
+      </a>
+    </div>
+  </div>
+
+  <!-- English Section -->
+  <div id="en" class="lang-section">
   <h1>Download LinkForush</h1>
   <p>Version 14.0.0</p>
 
@@ -125,43 +152,24 @@
     <h2>How to Install</h2>
     <ol>
       <li>Tap the button above to download the APK.</li>
-      <li>When prompted, allow your browser to install apps from unknown sources.</li>
+        <li>Allow installation from unknown sources if prompted.</li>
       <li>Open the downloaded file and install it.</li>
     </ol>
-    <p><strong>Note:</strong> The official SHA-256 checksum:</p>
-
-    <code>5096ad79951e31d05b127a91048d276dcfcf9ab5f5acbf011520f3c079238205</code>
-  </div>
-
-  <!-- SHA-256 Verification Section -->
-  <div class="verify-box">
-    <h2>Verify APK Integrity (Optional)</h2>
-    <p>You can verify that the APK is safe and has not been modified.</p>
-
-    <div class="hash-block">
+      <p><strong>Note:</strong> Official SHA-256 checksum:</p>
       <code>5096ad79951e31d05b127a91048d276dcfcf9ab5f5acbf011520f3c079238205</code>
     </div>
 
-    <p>Use this online SHA-256 tool:</p>
-
-    <a class="verify-button" 
-       href="https://emn178.github.io/online-tools/sha256_checksum.html" 
-       target="_blank">
-       Verify SHA-256 Hash
-    </a>
-  </div>
-
-  <!-- New Bazzar Download Card -->
+    <!-- Bazzar Card -->
   <div class="store-card">
     <h2>Download from Café Bazzar</h2>
-    <img src="bazzar.png" alt="Bazzar Icon" class="store-icon">
-    <p>If you prefer, you can install LinkForush directly from the Iranian app store.</p>
+      <img src="docs/bazzar.png" alt="Bazzar Icon" class="store-icon">
+      <p>You can install LinkForush directly from the Iranian app store.</p>
     <a class="store-button"
-       href="https://cafebazaar.ir/app/ir.linkforush.link_forush"
-
+         href="https://cafebazaar.ir/app/ir.linkforush.link_forush"
        target="_blank">
        Open in Bazzar
     </a>
+  </div>
   </div>
 
 </body>
