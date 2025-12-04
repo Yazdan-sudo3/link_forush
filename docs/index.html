@@ -35,7 +35,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* New Verify Block Styles */
+    /* Verify Block Styles */
     .verify-box {
       margin-top: 30px;
       padding: 25px;
@@ -73,6 +73,42 @@
     .verify-button:hover {
       background-color: #0056b3;
     }
+
+    /* Store Card Styles */
+    .store-card {
+      margin-top: 30px;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .store-icon {
+      width: 120px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .store-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .store-button:hover {
+      background-color: #1e7e34;
+    }
   </style>
 
 </head>
@@ -97,7 +133,7 @@
     <code>5096ad79951e31d05b127a91048d276dcfcf9ab5f5acbf011520f3c079238205</code>
   </div>
 
-  <!-- New SHA-256 Verification Section -->
+  <!-- SHA-256 Verification Section -->
   <div class="verify-box">
     <h2>Verify APK Integrity (Optional)</h2>
     <p>You can verify that the APK is safe and has not been modified.</p>
@@ -112,6 +148,19 @@
        href="https://emn178.github.io/online-tools/sha256_checksum.html" 
        target="_blank">
        Verify SHA-256 Hash
+    </a>
+  </div>
+
+  <!-- New Bazzar Download Card -->
+  <div class="store-card">
+    <h2>Download from Café Bazzar</h2>
+    <img src="docs/bazzar.png" alt="Bazzar Icon" class="store-icon">
+    <p>If you prefer, you can install LinkForush directly from the Iranian app store.</p>
+    <a class="store-button"
+       href="https://cafebazaar.ir/app/ir.linkforush.link_forush"
+
+       target="_blank">
+       Open in Bazzar
     </a>
   </div>
 
